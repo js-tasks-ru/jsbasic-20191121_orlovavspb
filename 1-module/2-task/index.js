@@ -10,10 +10,10 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  if (name.indexOf(' ') == -1 && name.length > 3 && name != '') {
+  if (typeof name === 'string' && name.indexOf(' ') === -1 && name.length > 3 && name != '') {
     return true;
   } else {
-  	return false;
+    return false;
   }
 }
 
