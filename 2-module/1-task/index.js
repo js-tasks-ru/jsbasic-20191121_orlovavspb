@@ -8,7 +8,7 @@ function clone(obj) {
   let a2 = 0;
   for (let prop in obj) {
     a1++;
-    if (typeof obj[prop] == 'undefined' || obj[prop] == null || typeof obj[prop] == 'object') {
+    if (obj[prop] === null || typeof obj[prop] === 'object') {
       a2++;
     }
   }
