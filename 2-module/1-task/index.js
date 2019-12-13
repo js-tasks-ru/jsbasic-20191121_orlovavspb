@@ -4,20 +4,20 @@
  * @returns {Object}
  */
 function clone(obj) {
-  let a1 = 0;
-  let a2 = 0;
-  for (let prop in obj) {
-    a1++;
-    if (obj[prop] === null || typeof obj[prop] === 'object') {
-      a2++;
-    }
-  }
-  if (a1 > 0 && a2 === 0) {
-    let copy = Object.assign({}, obj);
-    return copy;
-  }  
+  if (typeof obj !== 'object' || obj === null) {
+    return null;
+  } 
   else {
-    return false;
+    let clon = {}; 
+    for (let key in obj) {
+      if (typeof obj[key] !== 'object') {
+        clon[key] = obj[key];
+      }
+      else {
+        clon[key] = clone(obj[key]);
+      }
+    }
+    return clon;
   }
 }
-  
+
