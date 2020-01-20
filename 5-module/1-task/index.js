@@ -31,10 +31,3 @@ function highlight(table) {
     } 
   } 
 }
-/*
-for (let el1 of table.getElementsByTagName('tr')) {
-    if (el1.hasAttribute('hidden') != "true") {
-      el1.setAttribute('hidden');
-    }
-  }
-*/
